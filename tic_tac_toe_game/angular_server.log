@@ -92,3 +92,88 @@ Application bundle generation failed. [0.201 seconds]
         ╵                ~~~~~~~~~~~~~~~~~~~~~~
 
 
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  10.15 kB | 
+styles.css           | styles           |  95 bytes | 
+
+                     | Initial total    | 100.44 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-AMPOU3SL.mjs   | -                |  10.59 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.202 seconds]
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:3:37:
+      3 │     <div class="ttt-turn-indicator" *ngIf="!winner && !isDraw">
+        ╵                                      ~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:15:
+      6 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:6:29:
+      6 │     <div class="ttt-status" *ngIf="winner">
+        ╵                              ~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:15:
+      6 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:9:29:
+      9 │     <div class="ttt-status" *ngIf="isDraw && !winner">
+        ╵                              ~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:15:
+      6 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:14:9:
+      14 │         *ngFor="let row of board; let i = index"
+         ╵          ~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:15:
+      6 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:18:11:
+      18 │           *ngFor="let cell of row; let j = index"
+         ╵            ~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:6:15:
+      6 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
