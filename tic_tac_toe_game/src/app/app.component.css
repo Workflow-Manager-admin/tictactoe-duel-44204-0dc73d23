@@ -1,0 +1,139 @@
+/* Minimalist, light, centered TicTacToe UI using:
+   primary: #fff, secondary: #000, accent: #2196f3 */
+
+:root {
+  --ttt-primary: #ffffff;
+  --ttt-secondary: #000000;
+  --ttt-accent: #2196f3;
+}
+
+.ttt-main-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--ttt-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-game-panel {
+  background: var(--ttt-primary);
+  border-radius: 14px;
+  box-shadow: 0 2px 14px 2px rgba(33,33,33,0.07);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ttt-turn-indicator {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: var(--ttt-secondary);
+  letter-spacing: 0.01em;
+}
+
+.ttt-status {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ttt-winner {
+  color: var(--ttt-accent);
+}
+
+.ttt-draw {
+  color: var(--ttt-secondary);
+  opacity: 0.85;
+}
+
+.ttt-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--ttt-secondary);
+  border-radius: 8px;
+  box-shadow: 0 0.5px 2px 0px rgba(33,33,33,0.03);
+  margin-bottom: 2rem;
+}
+
+.ttt-row {
+  display: flex;
+}
+
+.ttt-cell {
+  background: var(--ttt-primary);
+  color: var(--ttt-secondary);
+  border: none;
+  border-right: 2px solid var(--ttt-secondary);
+  border-bottom: 2px solid var(--ttt-secondary);
+  font-size: 2.2rem;
+  height: 64px;
+  width: 64px;
+  text-align: center;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.12s, box-shadow 0.12s;
+  appearance: none;
+  border-radius: 0;
+  user-select: none;
+}
+
+.ttt-row:last-child .ttt-cell {
+  border-bottom: none;
+}
+.ttt-cell:last-child {
+  border-right: none;
+}
+
+.ttt-cell:hover:not(:disabled),
+.ttt-cell:focus-visible {
+  background: #f0f6fc;
+  box-shadow: 0 0 0 2px var(--ttt-accent)22;
+}
+
+.ttt-cell:disabled {
+  cursor: not-allowed;
+  background: #f6f6f6;
+  color: #c8c8c8;
+  opacity: 1;
+}
+
+/* X/O coloring */
+.ttt-x { color: var(--ttt-accent); }
+.ttt-o { color: #666666; }
+
+.ttt-reset-btn {
+  background: var(--ttt-accent);
+  color: var(--ttt-primary);
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 0.6rem 1.3rem;
+  font-weight: 500;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.13s;
+  box-shadow: 0 1px 2px rgba(33,33,33,0.08);
+}
+.ttt-reset-btn:hover, .ttt-reset-btn:focus-visible {
+  background: #1569b8;
+}
+
+/* Responsive for small screens */
+@media (max-width: 500px) {
+  .ttt-game-panel {
+    padding: 1.2rem;
+    min-width: 0;
+  }
+  .ttt-cell {
+    height: 48px;
+    width: 48px;
+    font-size: 1.35rem;
+  }
+}
